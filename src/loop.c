@@ -6,7 +6,7 @@
 /*   By: afomenko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/29 16:01:42 by afomenko          #+#    #+#             */
-/*   Updated: 2017/10/29 16:06:47 by afomenko         ###   ########.fr       */
+/*   Updated: 2017/10/29 17:15:38 by afomenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,9 +85,5 @@ void	put_info(t_wf *wf)
 			0xFFFFFF, "- - -| HOT KEYS |- - -");
 	mlx_string_put(wf->mlx, wf->win, WIDTH - 250,
 			30, 0xFFFFFF, "MOVE: ARROWS OR W A S D ");
-	mlx_string_put(wf->mlx, wf->win, WIDTH - 250,
-			50, 0xFFFFFF, "MOVE SPEED: + -");
-	mlx_string_put(wf->mlx, wf->win, WIDTH - 250,
-			70, 0xFFFFFF, "ROTATION SPEED: * /");
 	mlx_string_put(wf->mlx, wf->win, WIDTH - 250, 90, 0xFFFFFF, "QUIT: ESC");
 }

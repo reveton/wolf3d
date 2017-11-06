@@ -6,7 +6,7 @@
 /*   By: afomenko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/29 16:00:29 by afomenko          #+#    #+#             */
-/*   Updated: 2017/10/29 16:01:23 by afomenko         ###   ########.fr       */
+/*   Updated: 2017/10/29 17:36:16 by afomenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,6 @@ void	key_move(int k, t_wf *wf)
 	}
 }
 
-void	raise_speed(int k, t_wf *wf)
-{
-	if (k == 69)
-		wf->movespeed += 0.050000000000000003;
-	if (wf->movespeed > 0.050000000000000003)
-		if (k == 78)
-			wf->movespeed -= 0.050000000000000003;
-	if (k == 67)
-		wf->rotspeed += 0.050000000000000003;
-	if (wf->rotspeed > 0.050000000000000003)
-		if (k == 75)
-			wf->rotspeed -= 0.050000000000000003;
-}
-
 int		key_press(int k, t_wf *wf)
 {
 	key_move(k, wf);
@@ -52,6 +38,5 @@ int		key_press(int k, t_wf *wf)
 int		key_hook(int k, t_wf *wf)
 {
 	key_move(k, wf);
-	raise_speed(k, wf);
 	return (0);
 }

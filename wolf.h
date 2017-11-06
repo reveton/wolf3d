@@ -6,7 +6,7 @@
 /*   By: afomenko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/29 16:22:27 by afomenko          #+#    #+#             */
-/*   Updated: 2017/10/29 16:30:37 by afomenko         ###   ########.fr       */
+/*   Updated: 2017/11/06 16:33:19 by afomenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include "libft/libft.h"
 # include <time.h>
 # include <math.h>
-# define HEIGHT 600
-# define WIDTH 800
+# define HEIGHT 1080
+# define WIDTH 1920
 # define KEY_UP 126
 # define KEY_DOWN 125
 # define KEY_LEFT 123

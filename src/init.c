@@ -6,7 +6,7 @@
 /*   By: afomenko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/29 15:54:24 by afomenko          #+#    #+#             */
-/*   Updated: 2017/10/29 16:00:23 by afomenko         ###   ########.fr       */
+/*   Updated: 2017/11/06 16:00:45 by afomenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void	init_struct(t_wf **wf)
 	tmp->moveup = 0;
 	tmp->deltadistx = 0;
 	tmp->deltadisty = 0;
+	tmp->map = 0;
 	init_player(tmp);
 	init_map(tmp);
 	*wf = tmp;

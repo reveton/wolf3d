@@ -6,7 +6,7 @@
 /*   By: afomenko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/29 16:09:54 by afomenko          #+#    #+#             */
-/*   Updated: 2017/10/29 16:15:48 by afomenko         ###   ########.fr       */
+/*   Updated: 2017/11/06 15:38:09 by afomenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	parse_cord(t_wf *wf, char *line)
 {
-	wf->count_x = count_coord_x(line);
 	wf->count_y++;
 	new_cord_z(wf, line);
 }
@@ -40,7 +39,7 @@ int		check_line(const char *line)
 	while (line[i])
 	{
 		if (line[i] == '0')
-			return (0);
+			ft_put_error();
 		i++;
 	}
 	return (1);
@@ -67,8 +66,11 @@ int		parse_coords(int fd, t_wf *wf, char *line)
 	i = 0;
 	while (get_next_line(fd, &line) && line)
 	{
+		if (line[0] == '\0' || line[0] == '\n')
+			ft_put_error();
 		if (i == 0)
 		{
+			wf->count_x = count_coord_x(line);
 			if (check_map(line))
 				parse_cord(wf, line);
 		}
@@ -78,11 +80,7 @@ int		parse_coords(int fd, t_wf *wf, char *line)
 			free(line);
 		i++;
 	}
-	if (wf->count_y < 3)
+	if (wf->count_y < 3 || !check_map(line))
 		ft_put_error();
-	if (!check_map(line))
-		ft_put_error();
-	if (line == NULL)
-		return (0);
 	return (1);
 }

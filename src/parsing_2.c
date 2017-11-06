@@ -77,6 +77,8 @@ void	new_cord_z(t_wf *cord, char *arr)
 			ft_put_error();
 		i++;
 	}
+	if (cord->count_x != i)
+		ft_put_error();
 	if (str[i - 1][0] == '0')
 		ft_put_error();
 	push_other_cords(&cord, cords);
